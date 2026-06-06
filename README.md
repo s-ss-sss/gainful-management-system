@@ -97,7 +97,7 @@ gainful/
 ### t_users（ユーザーデータ）
 | Column           | Type            | Null | Key | Default             | Description |
 |------------------|-----------------|------|-----|---------------------|------------|
-| id               | INT(11) UNSIGNED| NO   | PK  | -                   | ID |
+| id               | INT(11)         | NO   | PK  | -                   | 内部ID |
 | user_id          | VARCHAR(11)     | NO   | UQ  | -                   | ユーザーID |
 | name             | VARCHAR(255)    | NO   | -   | -                   | 氏名 |
 | join_date        | DATE            | NO   | -   | -                   | 入社年月日 |
@@ -115,7 +115,7 @@ gainful/
 ### t_request（休暇申請データ）
 | Column            | Type           | Null | Key | Default            | Description |
 |-------------------|---------------|------|-----|--------------------|------------|
-| id                | INT(11)       | NO   | PK  | -                  | ID |
+| id                | INT(11)       | NO   | PK  | -                  | 休暇申請ID |
 | user_id           | INT(11)       | NO   | FK  | -                  | ユーザーID |
 | bundle_id         | VARCHAR(32)   | NO   | -   | -                  | 申請グループID |
 | start_date        | DATE          | NO   | -   | -                  | 申請開始日 |
@@ -143,7 +143,7 @@ gainful/
 ### t_compday（代休データ）
 | Column            | Type           | Null | Key | Default            | Description |
 |-------------------|---------------|------|-----|--------------------|------------|
-| id                | INT(11)       | NO   | PK  | -                  | ID |
+| id                | INT(11)       | NO   | PK  | -                  | 代休ID |
 | user_id           | INT(11)       | NO   | FK  | -                  | ユーザーID |
 | work_date         | DATE          | NO   | -   | -                  | 休日勤務日 |
 | add_number        | DECIMAL(3,1)  | NO   | -   | 0.0                | 付与代休日数 |
@@ -157,7 +157,7 @@ gainful/
 ### t_special（特別休暇データ）
 | Column        | Type           | Null | Key | Default            | Description |
 |---------------|---------------|------|-----|--------------------|------------|
-| id            | INT(11)       | NO   | PK  | -                  | ID |
+| id            | INT(11)       | NO   | PK  | -                  | 特別休暇ID |
 | user_id       | INT(11)       | NO   | FK  | -                  | ユーザーID |
 | sub_kind      | CHAR(1)       | NO   | -   | 0                  | 特別休暇種別 |
 | grant_date    | DATE          | NO   | -   | -                  | 特別休暇付与日 |
@@ -172,7 +172,7 @@ gainful/
 ### t_holiday_history（有休履歴データ）
 | Column       | Type           | Null | Key | Default            | Description |
 |--------------|---------------|------|-----|--------------------|------------|
-| id           | INT(11)       | NO   | PK  | -                  | ID |
+| id           | INT(11)       | NO   | PK  | -                  | 有休履歴ID |
 | user_id      | INT(11)       | NO   | FK  | -                  | ユーザーID |
 | action_type  | CHAR(1)       | NO   | -   | -                  | 処理区分 |
 | action_date  | DATE          | NO   | -   | -                  | 処理日 |
