@@ -1,0 +1,21 @@
+# リダイレクト有効
+RewriteEngine On
+
+# ルートパス設定
+RewriteBase /gainful/admin/
+
+# index.phpを隠蔽（ルート直下）
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s+/gainful/admin/index\.php(?:/([^\s]*))?\s [NC]
+RewriteRule ^index\.php(?:/(.*))?$ /gainful/admin/%1 [R=301,L,NE]
+RewriteRule ^index\.php$ /gainful/admin/ [R=301,L,NE]
+
+# index.phpを隠蔽（下層ディレクトリ）
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s+/gainful/admin/([^?\s]+/)index\.php(?:[^\s]*)?\s [NC]
+RewriteRule ^(.+/)?index\.php$ /gainful/admin/%1 [R=301,L,NE]
+
+# 静的ファイル除外
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 他リクエストをindex.phpに転送
+RewriteRule ^(.+)$ index.php/$1 [L]
