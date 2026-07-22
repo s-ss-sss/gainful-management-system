@@ -4,6 +4,9 @@
 # Logs
 logs/
 
+# Notes
+.info.md
+
 # IDE
 .idea/
 
