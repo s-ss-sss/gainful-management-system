@@ -90,7 +90,7 @@ class CompdayDao extends BaseDao {
 	 * 代休登録
 	 *
 	 * @access	public
-	 * @param   $param
+	 * @param	$param
 	 * @return
 	 */
 	public function insertCompday($param) {

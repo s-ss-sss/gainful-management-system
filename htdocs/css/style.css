@@ -31,15 +31,15 @@
 	--font-size-xxl: 2rem;		/* 32px */
 
 	/* Spacing */
-	--space-4: 0.25rem;   		/* 4px */
-	--space-8: 0.5rem;    		/* 8px */
-	--space-12: 0.75rem; 		/* 12px */
-	--space-16: 1rem;     		/* 16px */
-	--space-24: 1.5rem;   		/* 24px */
-	--space-32: 2rem;     		/* 32px */
-	--space-40: 2.5rem;   		/* 40px */
-	--space-48: 3rem;     		/* 48px */
-	--space-64: 4rem;     		/* 64px */
+	--space-4: 0.25rem;			/* 4px */
+	--space-8: 0.5rem;			/* 8px */
+	--space-12: 0.75rem;		/* 12px */
+	--space-16: 1rem;			/* 16px */
+	--space-24: 1.5rem;			/* 24px */
+	--space-32: 2rem;			/* 32px */
+	--space-40: 2.5rem;			/* 40px */
+	--space-48: 3rem;			/* 48px */
+	--space-64: 4rem;			/* 64px */
 }
 
 html {
@@ -198,11 +198,11 @@ input[type="checkbox"]:checked::before {
 	padding-right: 1rem;
 }
 
-.u-mb-4  {
+.u-mb-4 {
 	margin-bottom: var(--space-4);
 }
 
-.u-mb-8  {
+.u-mb-8 {
 	margin-bottom: var(--space-8);
 }
 
@@ -451,7 +451,7 @@ input[type="checkbox"]:checked::before {
 
 @media (max-width:768px){
 	.header__nav-item:nth-of-type(n+4) .header__nav-link {
-	  border-top: none;
+		border-top: none;
 	}
 }
 

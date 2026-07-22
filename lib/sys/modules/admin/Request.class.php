@@ -599,8 +599,8 @@ class Request extends Base {
 		}
 
 		// 申請日の合計を計算
-		$total_days = 0.0;
-		$sections   = $form_data['section'] ?? [];
+		$total_days	= 0.0;
+		$sections	= $form_data['section'] ?? [];
 		foreach ($sections as $sec) {
 
 			// 全休=2の場合は1.0で午前=0/午後=1は0.5消費

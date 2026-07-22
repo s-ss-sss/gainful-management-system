@@ -9,22 +9,22 @@
 				「追加する」を押してください
 			</p>
 		</div>
-		
+
 		{* 全体エラー *}
 		{if isset($warning)}
 			{foreach from=$warning item=msg}
 				<p class="error-text u-mb-16">{$msg}</p>
 			{/foreach}
 		{/if}
-		
+
 		<form action="{$BASE_URL}admin/user/" method="POST">
-			
+
 			{* state *}
 			<input type="hidden" name="state" value="delete">
-			
+
 			{* CSRFトークン *}
 			<input type="hidden" name="csrf_token" value="{$csrf_token}">
-			
+
 			{* ユーザーテーブル *}
 			<div class="table__wrap u-mb-24">
 				<table class="table">
@@ -52,30 +52,30 @@
 					<tbody class="table__tbody">
 						{foreach from=$users item=u}
 							<tr class="table__tr">
-								
+
 								{* ID *}
 								<td class="table__td">{$u.user_id}</td>
-								
+
 								{* 氏名 *}
 								<td class="table__td">{$u.name}</td>
-								
+
 								{* 所属 *}
 								<td class="table__td">{$u.auth_label}</td>
-								
+
 								{* メールアドレス *}
 								<td class="table__td">{$u.mail}</td>
-								
+
 								{* 入社年月日 *}
 								<td class="table__td">{$u.join_date_label}</td>
-								
+
 								{* 勤続年数 *}
 								<td class="table__td">{$u.year_label}</td>
-								
+
 								{* 修正 *}
 								<td class="table__td table__td--action">
 									<a href="{$BASE_URL}admin/user/edit/{$u.user_id}/" class="button button--sub button--sm">修正</a>
 								</td>
-								
+
 								{* 削除 *}
 								<td class="table__td table__td--action">
 									<button
@@ -89,7 +89,7 @@
 					</tbody>
 				</table>
 			</div>
-			
+
 			{* ボタン群 *}
 			<div class="button__wrap">
 				<a href="{$BASE_URL}admin/user/create/" class="button button--main">追加する</a>

@@ -113,7 +113,7 @@ class Compday extends Base {
 	 *
 	 * @access	private
 	 * @param	$add_number, $link1, $link2
-	 * @return  max($remain, 0.0)
+	 * @return	max($remain, 0.0)
 	 */
 	private function _determineCompdayRemain($add_number, $link1, $link2) {
 
@@ -435,8 +435,8 @@ class Compday extends Base {
 			}
 
 			// 差分計算
-			$before = (float)$row['add_number'];
-			$after  = $update_data['add_number'] ?? $before;
+			$before	= (float)$row['add_number'];
+			$after	= $update_data['add_number'] ?? $before;
 
 			// 残日数更新
 			$this->_rollbackCompday($row['user_id'], $before, $after);
@@ -595,7 +595,7 @@ class Compday extends Base {
 	 * 代休残数の差分反映
 	 *
 	 * @access	public
-	 * @param   $user_id, $before, $after
+	 * @param	$user_id, $before, $after
 	 * @return
 	 */
 	private function _rollbackCompday($user_id, $before, $after) {

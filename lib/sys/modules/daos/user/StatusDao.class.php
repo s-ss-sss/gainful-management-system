@@ -91,7 +91,7 @@ class StatusDao extends BaseDao {
 				delete_flg	= '1',
 				update_date	= NOW()
 			WHERE
-			    user_id		= ? AND
+				user_id		= ? AND
 				bundle_id	= ? AND 
 				delete_flg	= '0' AND
 				COALESCE(boss_result, 'x')		<> '1' AND

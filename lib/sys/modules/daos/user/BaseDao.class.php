@@ -149,7 +149,7 @@ class BaseDao extends \CommonDao {
 	 *
 	 * @access	private
 	 * @param	$user_id, $sub_type
-	 * @return  string
+	 * @return	string
 	 */
 	private function _getPendingSpecialConsumedDays($user_id, $sub_type) {
 

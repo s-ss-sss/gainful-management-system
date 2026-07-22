@@ -511,8 +511,8 @@ class CommonDao {
 	 * ユーザー個別取得
 	 *
 	 * @access	public
-	 * @param   $user_id
-	 * @return  array
+	 * @param	$user_id
+	 * @return	array
 	 */
 	public function getUserDetailById($user_id) {
 		$sql = "

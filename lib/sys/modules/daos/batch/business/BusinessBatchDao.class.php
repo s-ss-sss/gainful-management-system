@@ -183,7 +183,7 @@ class BusinessBatchDao extends \CommonDao {
 				r.manager_result	= '0' AND
 				r.start_date		< ? AND
 				r.delete_flg		= '0'
-    	";
+		";
 
 		return (float)$this->db->GetOne($sql, [$user_id, $expire_date]);
 	}
@@ -323,7 +323,7 @@ class BusinessBatchDao extends \CommonDao {
 			GROUP BY
 				s.id, s.user_id, s.add_number
 			HAVING
-        		s.add_number - COALESCE(SUM(r.special_number), 0.0) > 0
+				s.add_number - COALESCE(SUM(r.special_number), 0.0) > 0
 		";
 
 		return $this->db->GetAll($sql, [$today]);

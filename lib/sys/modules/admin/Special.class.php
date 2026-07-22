@@ -443,8 +443,8 @@ class Special extends Base {
 				}
 
 				// 差分計算
-				$before = (float)$row['add_number'];
-				$after  = $update_data['add_number'] ?? $before;
+				$before	= (float)$row['add_number'];
+				$after	= $update_data['add_number'] ?? $before;
 
 				// 残日数更新
 				$this->_rollbackSpecial($row['user_id'], $before, $after);
@@ -620,8 +620,8 @@ class Special extends Base {
 			$this->dao->beginTransaction();
 
 			// 差分計算
-			$before = (float)$row['add_number'];
-			$after  = 0.0;
+			$before	= (float)$row['add_number'];
+			$after	= 0.0;
 
 			// 残日数更新
 			$this->_rollbackSpecial($row['user_id'], $before, $after);
